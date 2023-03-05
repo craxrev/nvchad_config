@@ -228,7 +228,13 @@ M.autosession = {
 
 M.project = {
   n = {
-    ["<leader>p"] = { "<cmd> Telescope projects <CR>", "recent project" },
+    ["<leader>p"] = {
+      function()
+        vim.cmd "silent! bufdo! bwipeout"
+        vim.cmd "Telescope projects"
+      end,
+      "recent project",
+    },
   },
 }
 
