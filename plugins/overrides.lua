@@ -4,10 +4,12 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
+    "c",
     "html",
     "css",
     "javascript",
-    "c",
+    "typescript",
+    "tsx",
   },
 }
 
@@ -21,6 +23,8 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
+    "svelte-language-server",
+    "prettier",
     "deno",
   },
 }
@@ -39,6 +43,19 @@ M.nvimtree = {
       },
     },
   },
+  view = {
+    side = "right",
+  },
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_root = true,
+  },
+}
+
+M.telescope = {
+  extensions_list = { "themes", "terms", "projects" },
 }
 
 return M
